@@ -1,0 +1,38 @@
+{
+  "name": "@my-project/storage",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "clean": "rimraf dist",
+    "test": "vitest run --passWithNoTests",
+    "prisma:generate": "prisma generate",
+    "prisma:migrate:dev": "prisma migrate dev",
+    "prisma:studio": "prisma studio",
+    "lint": "eslint .",
+    "db:up": "supabase start",
+    "db:stop": "supabase stop",
+    "db:logs": "supabase logs",
+    "typecheck": "tsc --noEmit"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@prisma/client": "^6.5.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "@vitest/coverage-v8": "^1.3.1",
+    "prisma": "^6.5.0",
+    "rimraf": "^5.0.0",
+    "supabase": "^2.20.3",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.3.3",
+    "vitest": "^1.3.1"
+  },
+  "vitest": {
+    "include": [
+      "src/**/*.test.ts"
+    ]
+  }
+}

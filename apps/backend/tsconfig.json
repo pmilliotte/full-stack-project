@@ -1,0 +1,23 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "compilerOptions": {
+    "strict": true,
+    "module": "Node16",
+    "outDir": "./dist",
+    "composite": true,
+    "emitDeclarationOnly": true,
+    "declaration": true,
+    "declarationMap": true,
+    "sourceMap": true,
+    "baseUrl": ".",
+    "types": ["node"],
+    "paths": {
+      "@my-project/shared": ["../../packages/shared/src"],
+      "@my-project/storage": ["../../packages/storage/src"],
+      "~/*": ["./src/*"]
+    }
+  },
+  "include": ["src", "scripts"],
+  "references": [{ "path": "../../packages/shared" }, { "path": "../../packages/storage" }],
+  "exclude": ["node_modules", "dist"]
+}

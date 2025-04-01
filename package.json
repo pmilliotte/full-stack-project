@@ -1,0 +1,52 @@
+{
+  "name": "my-project",
+  "private": true,
+  "version": "0.0.1",
+  "type": "module",
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "scripts": {
+    "clean": "nx run-many --target=clean --all",
+    "test": "nx run-many --target=test --all",
+    "prepare": "husky install",
+    "lint": "nx run-many --target=lint --all",
+    "typecheck": "nx run-many --target=typecheck --all"
+  },
+  "devDependencies": {
+    "@nx/vite": "20.6.4",
+    "@nx/web": "20.6.4",
+    "@nx/workspace": "latest",
+    "@types/node": "^22.13.13",
+    "@typescript-eslint/eslint-plugin": "^7.1.0",
+    "@typescript-eslint/parser": "^7.1.0",
+    "@vitest/eslint-plugin": "^1.1.38",
+    "@vitest/expect": "^3.0.9",
+    "@vitest/runner": "^3.0.9",
+    "@vitest/ui": "^3.0.0",
+    "eslint": "^9.0.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-import": "^2.31.0",
+    "eslint-plugin-prettier": "^5.1.3",
+    "husky": "^9.1.7",
+    "jiti": "2.4.2",
+    "lint-staged": "^15.5.0",
+    "nx": "20.6.4",
+    "prettier": "^3.2.5",
+    "typescript": "^5.3.3",
+    "vitest": "^1.3.1",
+    "wait-on": "^7.2.0"
+  },
+  "packageManager": "pnpm@8.15.4",
+  "lint-staged": {
+    "*.{json,md,yml,yaml}": [
+      "prettier"
+    ],
+    "*.{js,jsx,ts,tsx}": [
+      "eslint --no-warn-ignored"
+    ]
+  },
+  "dependencies": {
+    "zod": "^3.24.2"
+  }
+}

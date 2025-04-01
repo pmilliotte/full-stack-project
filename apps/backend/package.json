@@ -1,0 +1,52 @@
+{
+  "name": "@my-project/backend",
+  "version": "0.0.1",
+  "private": true,
+  "main": "./dist/index.js",
+  "scripts": {
+    "dev": "tsx watch src/index.ts",
+    "clean": "rm -rf dist",
+    "build": "tsc -b && tsx scripts/build.ts",
+    "test": "vitest run --passWithNoTests",
+    "lint": "eslint .",
+    "security-check": "pnpm audit && snyk test",
+    "typecheck": "tsc --build"
+  },
+  "dependencies": {
+    "@my-project/shared": "workspace:*",
+    "@my-project/storage": "workspace:*",
+    "@supabase/auth-js": "^2.69.1",
+    "@supabase/supabase-js": "^2.49.3",
+    "@trpc/server": "^11.0.0",
+    "compression": "^1.7.4",
+    "cookie-parser": "^1.4.6",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.18.2",
+    "express-rate-limit": "^7.1.5",
+    "express-validator": "^7.0.1",
+    "helmet": "^7.1.0",
+    "lodash": "^4.17.21",
+    "morgan": "^1.10.0",
+    "prisma": "^6.5.0",
+    "zod": "^3.22.4"
+  },
+  "devDependencies": {
+    "@types/compression": "^1.7.5",
+    "@types/cookie-parser": "^1.4.7",
+    "@types/cors": "^2.8.17",
+    "@types/express": "^5.0.1",
+    "@types/express-serve-static-core": "^5.0.6",
+    "@types/express-session": "^1.17.10",
+    "@types/lodash": "^4.17.16",
+    "@types/morgan": "^1.9.9",
+    "@types/node": "^20.11.0",
+    "@vitest/coverage-v8": "^1.3.1",
+    "cross-env": "^7.0.3",
+    "esbuild": "^0.25.2",
+    "snyk": "^1.1296.0",
+    "tsx": "^4.19.3",
+    "typescript": "^5.3.3",
+    "vitest": "^1.3.1"
+  }
+}

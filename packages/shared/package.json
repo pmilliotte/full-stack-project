@@ -1,0 +1,21 @@
+{
+  "name": "@my-project/shared",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "clean": "rm -rf dist",
+    "test": "vitest run --passWithNoTests",
+    "lint": "eslint .",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "lodash": "^4.17.21",
+    "vitest": "^1.3.1",
+    "zod": "^3.24.2"
+  },
+  "devDependencies": {
+    "@types/lodash": "^4.17.16",
+    "@types/node": "^20.11.0",
+    "typescript": "^5.3.3"
+  }
+}
